@@ -1,0 +1,37 @@
+@use "../../Styles/Partials/mixins" as *;
+@use "../../Styles/Partials/typography" as *;
+@use "../../Styles/Partials/variables" as *;
+
+#button {
+  color: rgba(74, 40, 85, 0.21);
+  // -image: url(../../Assets/Icons/upload.svg);
+  background-repeat: no-repeat;
+  background-position-x: 0.5rem;
+  background-position-y: center;
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 18.5rem;
+  height: 2.5rem;
+  background-color: $BrainFlix-Blue;
+  color: white;
+
+  padding: 0rem;
+  border: 0rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 400;
+
+  @include tablet {
+    width: 75%;
+    align-content: end;
+    margin-left: 1rem;
+  }
+  @include desktop {
+    margin-left: 2rem;
+  }
+}
