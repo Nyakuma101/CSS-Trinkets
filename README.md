@@ -1,4 +1,5 @@
 # WELCOME ALL
+CSS Trinkets is the site that will host all my CSS work 
 
 # Getting Started with Create React App
 
