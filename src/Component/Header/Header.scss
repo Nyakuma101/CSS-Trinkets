@@ -1,0 +1,129 @@
+@use "../../Styles/Partials/mixins" as *;
+@use "../../Styles/Partials/typography" as *;
+@use "../../Styles/Partials/variables" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "AvenirNext LT Pro";
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: unset;
+  }
+
+  &__logo {
+    width: 7.5rem;
+    height: 2.5rem;
+    margin: 1rem 1rem;
+
+    @include tablet {
+      margin-left: 2rem;
+    }
+    @include desktop {
+      margin-left: 3.5rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    @include tablet {
+      align-items: end;
+    }
+  }
+
+  &__search {
+    // background-image: url(../../Assets/Icons/search.svg);
+    background-repeat: no-repeat;
+    background-position-x: 0.5rem;
+    background-position-y: center;
+    margin-bottom: 1rem;
+    padding-left: 2.5rem;
+
+    width: 13rem;
+    height: 2.5rem;
+    background-color: $Alabaster;
+    border-radius: 4px;
+    box-shadow: none;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 400;
+    border: $Silver solid 1px;
+
+    @include tablet {
+      display: flex;
+      margin: 0;
+      align-items: end;
+      margin-left: 4rem;
+    }
+    @include desktop {
+      margin-left: 38rem;
+    }
+  }
+  &__box {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+    @include desktop {
+      // justify-content: unset;
+      justify-content: end;
+      align-items: end;
+      padding-right: 3.5rem;
+      width: 100%;
+    }
+  }
+  &__circular {
+    // background-image: url(../../Assets/Images/Mohan-muruge.jpg);
+    background-size: cover;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      margin: 0;
+      display: none;
+    }
+  }
+
+  &__circular2 {
+    @include tablet {
+      // background-image: url(../../Assets/Images/Mohan-muruge.jpg);
+      background-size: cover;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 50%;
+
+      margin-left: 1rem;
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      margin-right: 2rem;
+    }
+    @include desktop {
+      margin-right: unset;
+    }
+  }
+  // &__button {
+  //   // background-image: url(../../Assets/Icons/upload.svg);
+  // }
+}

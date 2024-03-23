@@ -1,0 +1,261 @@
+@use "../../Styles/Partials/mixins" as *;
+@use "../../Styles/Partials/typography" as *;
+@use "../../Styles/Partials/variables" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Titillium Web", Tahoma, sans-serif;
+}
+
+.home {
+  background-color: #555656;
+  width: 100vw;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    @include mobileMedium {
+      padding: 1.5rem;
+    }
+    @include mobileLarge {
+      padding: 2rem;
+    }
+    @include tablet {
+      padding: 2.5rem;
+    }
+    @include laptop {
+      padding: 3rem;
+    }
+  }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #eae8e6;
+    height: 4rem;
+    :hover {
+      background-color: #ad987b;
+      box-shadow: inset 0 0 1rem #695f50;
+    }
+    @include mobileMedium {
+      height: 6rem;
+    }
+  }
+  &__css {
+    margin: 0;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.5rem;
+    @include mobileMedium {
+      font-size: 3.7rem;
+    }
+  }
+  &__trinkets {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 0.5rem;
+    letter-spacing: 0.3rem;
+    @include mobileMedium {
+      font-size: 0.8rem;
+      letter-spacing: 0.4rem;
+    }
+  }
+  &__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #728180;
+    width: 6rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    @include mobileMedium {
+      width: 7rem;
+      height: 4.5rem;
+    }
+    @include mobileLarge {
+      font-size: 2.5rem;
+    }
+  }
+  &__toggleSquare {
+    display: flex;
+    align-items: start;
+    margin: 0.4rem;
+    background-color: #eae8e6;
+    width: 3rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    @include mobileMedium {
+      width: 3.5rem;
+      margin: 0.5rem;
+    }
+    @include mobileLarge {
+    }
+  }
+
+  &__dropDownMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 4rem;
+    :hover {
+      background-color: #ad987b;
+      box-shadow: inset 0 0 1rem #695f50;
+    }
+    @include mobileMedium {
+      height: 5.5rem;
+    }
+  }
+
+  &__dropLine {
+    display: flex;
+    align-items: center;
+    width: 4rem;
+    border-bottom: 0.2rem solid #eae8e6;
+    @include tablet {
+      width: 6rem;
+    }
+  }
+  &__border {
+    margin: 0;
+    border: 0 none;
+    height: 0.1rem;
+    background-color: #728180;
+  }
+  &__border1 {
+    margin: 0;
+    border: 0 none;
+    height: 0rem;
+    @include mobileLarge {
+      margin: 0;
+      border: 0 none;
+      height: 0.1rem;
+      background-color: #728180;
+    }
+  }
+
+  &__content {
+    display: none;
+    @include mobileLarge {
+      margin: 1rem;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      color: #eae8e6;
+      font-weight: 100;
+      font-style: normal;
+      font-size: 1rem;
+      :hover {
+        background-color: #728180;
+      }
+      @include tablet {
+        margin: 1.5rem 2.5rem;
+        font-size: 1.5rem;
+      }
+      @include laptop {
+        font-size: 2rem;
+      }
+    }
+  }
+  &__button {
+    margin: 0;
+  }
+  &__tabBars {
+    margin: 0;
+  }
+  &__logins {
+    margin: 0;
+  }
+  &__mediaPlayers {
+    margin: 0;
+  }
+
+  &__body {
+    height: 100vh;
+    background-color: #555656;
+    display: flex;
+    justify-content: center;
+  }
+  &__squares {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+    justify-content: space-evenly;
+    background-color: #728180;
+    border-radius: 1.5rem;
+
+    @include mobileMedium {
+      margin: 1.5rem;
+    }
+    @include mobileLarge {
+      margin: 2rem;
+    }
+    @include tablet {
+      margin: 2.5rem;
+    }
+    @include laptop {
+      margin: 3rem;
+    }
+  }
+  &__square1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    width: 17rem;
+    background-color: #ad987b;
+    border-radius: 1rem;
+    @include mobileMedium {
+      width: 20rem;
+    }
+    @include mobileLarge {
+      margin: 0.9rem;
+      text-align: center;
+    }
+    @include tablet {
+      margin: 1.5rem;
+      width: 18rem;
+    }
+    @include laptop {
+      margin: 1rem;
+      width: 27em;
+    }
+  }
+  &__soon {
+    display: flex;
+    color: #eae8e694;
+    margin: 0;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.5rem;
+    @include mobileLarge {
+      font-size: 2rem;
+    }
+    @include tablet {
+      font-size: 3rem;
+    }
+  }
+  &__footer {
+    background-color: #555656;
+    display: flex;
+    justify-content: center;
+
+    padding: 1rem;
+    color: #eae8e6;
+    margin: 0;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1rem;
+  }
+}
